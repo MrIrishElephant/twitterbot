@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Football Scores Bot Configuration</title>
+	<style>
+		header {
+			background-color: #0074D9;
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		form {
+			margin: 20px;
+		}
+
+		h2 {
+			margin-top: 40px;
+		}
+
+		label {
+			display: block;
+		}
+
+		ul#tweet-history {
+			padding-left: 20px;
+		}
+
+		.tweet-type {
+			font-weight: bold;
+		}
+
+		.tweet-time {
+			margin-left: 10px;
+			color: gray;
+		}
+
+		button[type=submit] {
+			margin-top: 10px;
+			padding: 5px 10px;
+			background-color: #0074D9;
+			color: white;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		button[type=submit]:hover {
+			background-color: #001F3F;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Football Scores Bot Configuration</h1>
+	</header>
+
+	<main>
+		<form>
+			<h2>Choose Competitions/Leagues/Games to Generate Tweets:</h2>
+			<input type="checkbox" id="premier-league" name="premier-league" value="premier-league">
+			<label for="premier-league">Premier League</label><br>
+			<input type="checkbox" id="la-liga" name="la-liga" value="la-liga">
+			<label for="la-liga">La Liga</label><br>
+			<input type="checkbox" id="serie-a" name="serie-a" value="serie-a">
+			<label for="serie-a">Serie A</label><br>
+			<button type="submit">Save Competitions to Generate Tweets</button>
+		</form>
+		<form>
+			<h2>Enable/Disable Service:</h2>
+			<label for="service-status">Service Status:</label>
+			<select id="service-status" name="service-status">
+				<option value="enabled">Enabled</option>
+				<option value="disabled">Disabled</option>
+			</select>
+			<button type="submit">Save Enable/Disable Service</button>
+		</form>
+
+			<h2>History of Auto-Generated Tweets:</h2>
+			<ul id="tweet-history">
+				<li><span class="tweet-type">Automated Tweet</span> <span class="tweet-time">2 minutes ago</span> Arsenal beats Chelsea 3-1</li>
+				<li><span class="tweet-type">Human Tweet</span> <span class="tweet-time">5 hours ago</span> What a goal by Messi!</li>
+				<li><span class="tweet-type">Automated Tweet</span> <span class="tweet-time">1 day ago</span> Manchester United draws with Liverpool 1-1</li>
+			</ul>
+		<form>
+			<h2>Delete/Retract Tweets:</h2>
+			<label for="tweet-id">Tweet ID:</label>
+			<input type="text" id="tweet-id" name="tweet-id"><br>
+			<button type="submit">Delete/Retract Tweet</button>
+		</form>
+	</main>
+
+	<footer>
+		<p>© 2023 Football Scores Bot</p>
+	</footer>
+</body>
+</html>
